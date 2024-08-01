@@ -1,37 +1,38 @@
 # 0x01. Lockboxes
 
-## Description
 This project involves developing a solution to determine if all boxes can be opened. Each box may contain keys to other boxes, and the goal is to unlock all the boxes starting from the first one, which is already unlocked.
 
-## Tasks
+## Task :page_with_curl:
 
-### 0. Lockboxes
-**Mandatory**
+* **0. Lockboxes**
+  * [0-lockboxes.py](./0-lockboxes.py): Python function that determines if all boxes can be opened given a list of lists, where each list represents the keys in each box.
+  * Usage: `python3 0-lockboxes.py`
+  * Returns `True` if all boxes can be opened, else returns `False`.
+  * The first box `boxes[0]` is unlocked initially.
 
-You have `n` number of locked boxes in front of you. Each box is numbered sequentially from 0 to `n - 1` and each box may contain keys to other boxes.
+### Example Usage
 
-Write a method that determines if all the boxes can be opened.
+1. **Script**: `main_0.py`
+   ```python
+   #!/usr/bin/python3
+   """
+   main_0
+   """
+   canUnlockAll = __import__('0-lockboxes').canUnlockAll
 
-- **Prototype:** `def canUnlockAll(boxes)`
-- `boxes` is a list of lists
-- A key with the same number as a box opens that box
-- You can assume all keys will be positive integers
-- There can be keys that do not have boxes
-- The first box `boxes[0]` is unlocked
-- Return `True` if all boxes can be opened, else return `False`
+   def print_result(result):
+       """
+       Print the result
+       """
+       print(result)
 
-Example:
-```python
-#!/usr/bin/python3
+   if __name__ == "__main__":
+       boxes1 = [[1], [2], [3], [4], []]
+       print_result(canUnlockAll(boxes1))  # True
 
-canUnlockAll = __import__('0-lockboxes').canUnlockAll
+       boxes2 = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
+       print_result(canUnlockAll(boxes2))  # True
 
-boxes = [[1], [2], [3], [4], []]
-print(canUnlockAll(boxes))  # True
-
-boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
-print(canUnlockAll(boxes))  # True
-
-boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
-print(canUnlockAll(boxes))  # False
+       boxes3 = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
+       print_result(canUnlockAll(boxes3))  # False
 
