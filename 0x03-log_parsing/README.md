@@ -1,6 +1,4 @@
-# Project Documentation
-
-## 0x03. Log Parsing
+# 0x03. Log Parsing
 
 This project involves creating a script to parse logs and compute metrics. The focus is on processing input lines, extracting relevant data, and outputting summary statistics based on status codes and file sizes.
 
