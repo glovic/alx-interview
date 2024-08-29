@@ -10,23 +10,32 @@ This project involves solving the N Queens problem using a backtracking algorith
       ```bash
       ./0-nqueens.py N
       ```
-    * **Input Validation:**
-      * If the user provides the wrong number of arguments, the program should print:
-        ```bash
-        Usage: nqueens N
-        ```
-        and exit with status 1.
-      * If N is not an integer, the program should print:
-        ```bash
-        N must be a number
-        ```
-        and exit with status 1.
-      * If N is less than 4, the program should print:
-        ```bash
-        N must be at least 4
-        ```
-        and exit with status 1.
-    * **Output:** The program should print every possible solution to the problem, with one solution per line, in the following format:
-      ```python
-      [[row, col], [row, col], ..., [row, col]]
-      ```
+## Usage
+
+\`\`\`bash
+nqueens N
+\`\`\`
+
+- N is the number of queens.
+- N must be an integer greater than or equal to 4.
+- The program prints every possible solution to the problem in the format shown below.
+
+\`\`\`bash
+$ ./0-nqueens.py 4
+[[0, 1], [1, 3], [2, 0], [3, 2]]
+[[0, 2], [1, 0], [2, 3], [3, 1]]
+\`\`\`
+
+Each inner list represents the coordinates of a queen on the NxN chessboard.
+
+## Example
+
+In this example, for a 4x4 chessboard, there are two possible solutions:
+
+\`\`\`bash
+$ ./0-nqueens.py 4
+[[0, 1], [1, 3], [2, 0], [3, 2]]
+[[0, 2], [1, 0], [2, 3], [3, 1]]
+\`\`\`
+
+In the output, \`[0, 1]\` indicates a queen placed at the first row and the second column, and so on.
