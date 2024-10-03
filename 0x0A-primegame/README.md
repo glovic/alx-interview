@@ -1,9 +1,7 @@
 # Prime Game ReadMe
 
+For this project, I leverage mine understanding of prime numbers, game theory, and algorithm optimization to solve a competitive game scenario. The challenge involves determining the winner of a game based on the strategic removal of prime numbers and their multiples from a set of consecutive integers.
 
-Welcome to the **Prime Game** project, a playful yet strategic challenge where two players—Maria and Ben—compete to win a game based on prime numbers. The game is simple yet requires optimal strategies to succeed. Maria always starts first, and the two take turns selecting prime numbers from a set of consecutive integers. The twist? Once a prime number is chosen, all its multiples must be removed from the set as well.
-
-The game goes on for multiple rounds, and your task is to determine the winner of each round. By analyzing their moves, you'll figure out who wins the most rounds.
 
 ## Game Rules
 
@@ -52,4 +50,8 @@ In this example, the game runs for 5 rounds with the following values of `n`: `[
 isWinner = __import__('0-prime_game').isWinner
 
 print("Winner: {}".format(isWinner(5, [2, 5, 1, 4, 3])))
+
+
+### Output:
+`Winner: Ben`
 
