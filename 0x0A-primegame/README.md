@@ -38,3 +38,18 @@ You will implement the function `isWinner(x, nums)` where:
 - `x` is the number of rounds.
 - `nums` is an array where each element represents the number of integers (`n`) in the set for that round.
 
+
+## Example Usage
+
+Here's how you can test the `isWinner` function using `main_0.py`.
+
+### Input:
+In this example, the game runs for 5 rounds with the following values of `n`: `[2, 5, 1, 4, 3]`.
+
+```python
+#!/usr/bin/python3
+
+isWinner = __import__('0-prime_game').isWinner
+
+print("Winner: {}".format(isWinner(5, [2, 5, 1, 4, 3])))
+
